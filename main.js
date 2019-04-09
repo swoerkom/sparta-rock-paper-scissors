@@ -1,5 +1,5 @@
-resultUser = 0;
-resultComputer = 0;
+var resultUser = 0;
+var resultComputer = 0;
 
 function compareChoice(choice1, choice2) {
   if (choice1 === choice2) {
@@ -8,33 +8,33 @@ function compareChoice(choice1, choice2) {
   if (choice1 === "rock") {
     if (choice2 === "scissors")
     resultUser++;
-    return "You win this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
+    return "Rock wins, you win this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
   } else {
     resultComputer++;
-    return "You lose this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
+    return "Scissors win, you lose this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
 }
 
   if (choice1 === "paper") {
     if (choice2 === "rock") {
       resultUser++;
-      return "You win this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
+      return "Paper wins, you win this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
     } else {
       resultComputer++;
-      return "You lose this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
+      return "Scissors win, you lose this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
     }
   }
   if (choice1 === "scissors") {
     if (choice2 === "rock"){
       resultComputer++;
-      return "You lose this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
+      return "Rock wins, you lose this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
     } else {
       resultUser++;
-      return "You win this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
+      return "Scissors win this round! Your Score: " +resultUser + " Computer score: " +resultComputer;
     }
   }
 }
 
-while (resultComputer < 3 || resultUser < 3) {
+while (resultComputer < 3 && resultUser < 3) {
   var userChoice = prompt("Rock, paper or scissors?");
   var computerChoice = Math.random();
     if (computerChoice < 0.34) {
